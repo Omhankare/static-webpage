@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tektur', sans-serif;
+}
+
+.main {
+    background: url(background.jpg);
+    height: 100vh;
+    background-size:cover;
+}
+
+.b1 i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 60px;
+    left: 16px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px; 
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(255, 255,255,0.1);
+    box-shadow: 0 0 7px rgb(255, 255, 255,0.5);
+    transition: all 0.3s linear;
+}
+
+.sidebar .title {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255,0.5);
+    height: 60px;
+}
+
+.sidebar .title a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.sidebar .menu {
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar .b2 i{
+    color: gray;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    left:275px; 
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar .menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+.sidebar .menu i,a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.sidebar .app {
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+
+.sidebar .app i {
+    padding-right: 10px;
+    opacity: 0.5;
+    padding: 0 5px;
+
+}
+
+#check {
+    display: none;
+}
+
+.sidebar .menu li:hover {
+    box-shadow: 0 0 8px rgb(255, 255, 255,0.5);
+}
+
+.b1 i:hover {
+    font-size: 40px
+}
+
+.sidebar .b2 i:hover {
+    font-size: 30px
+}
+
+.sidebar .app i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ .b1 {
+    opacity: 0;
+}
